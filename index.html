@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftyToys | Вязаные игрушки ручной работы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- УВЕДОМЛЕНИЯ -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- ОСНОВНОЙ КОНТЕЙНЕР -->
+    <div class="container">
+        <!-- ШАПКА -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon">🧸</div>
+                <div class="logo-text">
+                    <h1>CraftyToys</h1>
+                    <p class="tagline">игрушки с душой</p>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <button class="cart-btn" id="cartButton">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ПРИВЕТСТВИЕ -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2><span class="highlight">Вязаные игрушки</span> для детей и взрослых.</h2>
+                <p>Каждая игрушка создается вручную с вниманием к деталям.</p>
+                <a href="#products" class="cta-button">
+                    <i class="fas fa-gift"></i> Выбрать игрушку
+                </a>
+            </div>
+            <div class="hero-decoration">✨</div>
+        </section>
+
+        <!-- КАТЕГОРИИ -->
+        <div class="categories" id="categories">
+            <button class="category-btn active" data-category="all">
+                <i class="fas fa-star"></i> Все
+            </button>
+            <button class="category-btn" data-category="животные">
+                <i class="fas fa-paw"></i> Животные
+            </button>
+            <button class="category-btn" data-category="персонажи">
+                <i class="fas fa-hat-wizard"></i> Персонажи
+            </button>
+            <button class="category-btn" data-category="интерьерные">
+                <i class="fas fa-home"></i> Для дома
+            </button>
+        </div>
+
+        <!-- КАТАЛОГ -->
+        <section class="products-section" id="products">
+            <h3><i class="fas fa-yarn"></i> Наши игрушки</h3>
+            <div class="products-grid" id="productsContainer">
+                <!-- Товары загружаются через JS -->
+            </div>
+        </section>
+
+        <!-- КОРЗИНА -->
+        <div class="cart-overlay" id="cartOverlay">
+            <div class="cart-container">
+                <div class="cart-header">
+                    <h2><i class="fas fa-shopping-basket"></i> Ваша корзина</h2>
+                    <button class="close-btn" id="closeCart">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="cart-items" id="cartItems">
+                    <!-- Товары в корзине -->
+                    <div class="empty-cart">
+                        <div class="empty-icon">🛒</div>
+                        <p>Корзина пока пуста</p>
+                        <p class="empty-hint">Добавьте первую игрушку!</p>
+                    </div>
+                </div>
+                
+                <div class="cart-footer">
+                    <div class="cart-summary">
+                        <div class="total-line">
+                            <span>Итого:</span>
+                            <span class="total-price" id="cartTotal">0 ₽</span>
+                        </div>
+                        <p class="delivery-info"><i class="fas fa-truck"></i> Доставку обсудим индивидуально</p>
+                    </div>
+                    
+                    <button class="order-btn" id="checkoutBtn">
+                        <i class="fab fa-telegram"></i> Оформить в Telegram
+                    </button>
+                    
+                    <p class="order-note">После оформления вы перейдете в Telegram для подтверждения заказа</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- КОНТАКТЫ -->
+        <footer class="footer">
+            <div class="footer-section">
+                <h4><i class="fas fa-store"></i> CraftyToys</h4>
+                <p>Вязаные игрушки ручной работы</p>
+                <p>Изготовление: 3-10 дней</p>
+                <p>Доставка по всей России</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4><i class="fas fa-user-circle"></i> Мастер</h4>
+                <p>Анастасия</p>
+                <p>Работаю с 2020 года</p>
+                <p>Более 200 довольных клиентов</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4><i class="fas fa-comments"></i> Связь</h4>
+                <div class="social-links">
+                    <a href="https://t.me/flflflflffl" class="social-link telegram" target="_blank">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-note">Принимаем заказы на индивидуальное изготовление!</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
